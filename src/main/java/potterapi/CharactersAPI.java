@@ -1,6 +1,6 @@
 package potterapi;
 
-import com.travelocity.framework.utils.ConfigUtils;
+import com.common.framework.utils.ConfigUtils;
 
 public class CharactersAPI extends BasePotterAPI {
 

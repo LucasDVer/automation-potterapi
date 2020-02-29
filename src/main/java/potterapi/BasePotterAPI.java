@@ -1,7 +1,7 @@
 package potterapi;
 
-import com.travelocity.framework.api.BaseAPI;
-import com.travelocity.framework.utils.ConfigUtils;
+import com.common.framework.api.BaseAPI;
+import com.common.framework.utils.ConfigUtils;
 import io.restassured.RestAssured;
 import io.restassured.response.Response;
 
