@@ -6,13 +6,13 @@ public enum PotterAPIUsers {
     INVALID("invalidKey"),
     UNAUTHORIZED("");
 
-    PotterAPIUsers(String key){
+    private String key;
+
+    PotterAPIUsers(String key) {
         this.key = key;
     }
 
-    private String key;
-
-    public String getKey(){
+    public String getKey() {
         return key;
     }
 

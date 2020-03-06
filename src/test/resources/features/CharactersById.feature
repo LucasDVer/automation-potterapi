@@ -20,7 +20,8 @@ Feature: Get a character
     Given The user has access to the potter api endpoints
     When The user performs a GET request to the characters endpoint using an <id>
         #Then  The response status should be 404
-    Then The response error name should be CastError and contains the correct error message
+    Then The response error name should be "CastError" and contains "Cast to ObjectId failed for value"
+
 
     Examples:
 
@@ -30,11 +31,10 @@ Feature: Get a character
       | "5a0fa5deae5bc100213c23300" |
       | "5a0fa60aae5bc100213c233"   |
 
-  @testInTheMoment
   Scenario Outline: Get a unsuccessful response with a invalid key
     Given The user has an invalid key for the potter api endpoints
     When The user performs a GET request to the characters endpoint using an <id>
-    Then The response message should contain: API Key Not Found
+    Then The response message should contains "API Key Not Found"
 
     Examples:
 
@@ -47,7 +47,7 @@ Feature: Get a character
   Scenario Outline: Get a unsuccessful response without a key
     Given The user does not have access to the potter api endpoints
     When The user performs a GET request to the characters endpoint using an <id>
-    Then The response message should contain: Must pass API key for request
+    Then The response message should be "Must pass API key for request"
 
     Examples:
 

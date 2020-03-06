@@ -10,7 +10,7 @@ Feature: Get all characters
   Scenario: Get a unsuccessful response
     Given The user does not have access to the potter api endpoints
     When The user performs a GET request to the characters endpoint
-    Then The response message should contains "Must pass API key for request"
+    Then The response message should be "Must pass API key for request"
     And The response status should be 409
 
   Scenario: Get a unsuccessful response

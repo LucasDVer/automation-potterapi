@@ -7,7 +7,6 @@ import org.junit.Assert;
 import potterapi.CharactersAPI;
 import potterapi.PotterAPIContext;
 import potterapi.model.CharactersResponseBody;
-import potterapi.model.ErrorMessageBadIdResponseBody;
 
 public class CharacterByIdSteps implements En {
 
@@ -24,14 +23,6 @@ public class CharacterByIdSteps implements En {
             Assert.assertNotNull("Response it is not valid", characterResponseBody);
             Assert.assertTrue("Character Name should not be empty", StringUtils.
                     isNotBlank(characterResponseBody.getName()));
-        });
-        Then("The response error name should be CastError and contains the correct error message", () -> {
-            ErrorMessageBadIdResponseBody errorMessageBadIdResponseBody = apiContext.getResponse()
-                    .as(ErrorMessageBadIdResponseBody.class);
-            Assert.assertEquals("The error name is not the same",
-                    "CastError", errorMessageBadIdResponseBody.getName());
-            Assert.assertTrue("The error message is no the same",
-                    errorMessageBadIdResponseBody.getMessage().contains("Cast to ObjectId failed for value"));
         });
     }
 

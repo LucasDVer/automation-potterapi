@@ -8,7 +8,6 @@ import lombok.Setter;
 @Setter
 public class CharactersResponseBody {
 
-
     private String role;
 
     private String bloodStatus;

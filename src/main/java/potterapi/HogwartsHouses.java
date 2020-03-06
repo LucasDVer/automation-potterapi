@@ -13,16 +13,16 @@ public enum HogwartsHouses {
         this.house = house;
     }
 
-    public String getHouse() {
-        return house;
-    }
-
     public static boolean isHouseInTheList(String house) {
         for (HogwartsHouses validHouse : values()) {
-            if(validHouse.house.equals(house)){
+            if (validHouse.house.equals(house)) {
                 return true;
             }
         }
         return false;
+    }
+
+    public String getHouse() {
+        return house;
     }
 }
