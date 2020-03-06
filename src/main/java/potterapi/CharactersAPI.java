@@ -8,7 +8,6 @@ public class CharactersAPI extends BasePotterAPI {
 
     public CharactersAPI() {
         super();
-        loadSpecificPath();
     }
 
     @Override

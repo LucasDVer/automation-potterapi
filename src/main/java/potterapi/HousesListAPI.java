@@ -8,7 +8,6 @@ public class HousesListAPI extends BasePotterAPI {
 
     public HousesListAPI() {
         super();
-        loadSpecificPath();
     }
 
     @Override

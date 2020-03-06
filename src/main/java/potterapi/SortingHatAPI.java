@@ -8,7 +8,6 @@ public class SortingHatAPI extends BasePotterAPI {
 
     public SortingHatAPI() {
         super();
-        loadSpecificPath();
     }
 
     @Override
