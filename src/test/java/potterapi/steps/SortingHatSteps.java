@@ -3,7 +3,7 @@ package potterapi.steps;
 import io.cucumber.java8.En;
 import org.apache.commons.lang3.StringUtils;
 import org.junit.Assert;
-import potterapi.constans.HogwartsHouses;
+import potterapi.constants.HogwartsHouses;
 import potterapi.PotterAPIContext;
 import potterapi.SortingHatAPI;
 

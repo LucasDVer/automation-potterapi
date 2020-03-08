@@ -16,7 +16,7 @@ Feature: Get all characters
   Scenario: Get a unsuccessful response
     Given The user has an invalid key for the potter api endpoints
     When The user performs a GET request to the characters endpoint
-    Then The response message should contains "API Key Not Found"
+    Then The response message should be "API Key Not Found"
 
 
 

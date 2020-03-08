@@ -1,4 +1,4 @@
-package potterapi.constans;
+package potterapi.constants;
 
 public enum PotterAPIUsers {
 

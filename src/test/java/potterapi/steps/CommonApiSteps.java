@@ -4,7 +4,7 @@ import io.cucumber.java8.En;
 import org.junit.Assert;
 import potterapi.PotterAPIContext;
 import potterapi.model.User;
-import potterapi.constans.PotterAPIUsers;
+import potterapi.constants.PotterAPIUsers;
 import potterapi.model.responses.ErrorMessageBadIdResponseBody;
 import potterapi.model.responses.ErrorMessageWithKeyResponseBody;
 
@@ -38,11 +38,6 @@ public class CommonApiSteps implements En {
             ErrorMessageWithKeyResponseBody errorMessageWithKeyResponseBody = apiContext.getResponse().
                     as(ErrorMessageWithKeyResponseBody.class);
             Assert.assertEquals("The message is incorrect", errorMessageWithKeyResponseBody.getError(), message);
-        });
-        Then("The response message should contains {string}", (String message) -> {
-            ErrorMessageWithKeyResponseBody errorMessageWithKeyResponseBody = apiContext.getResponse().
-                    as(ErrorMessageWithKeyResponseBody.class);
-            Assert.assertTrue("The message is incorrect", errorMessageWithKeyResponseBody.getError().contains(message));
         });
 
         Then("The response error name should be {string} and the message should contains {string}", (String message,

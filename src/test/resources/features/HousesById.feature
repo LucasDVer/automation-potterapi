@@ -33,7 +33,7 @@ Feature: Get a house using an Id
   Scenario Outline: Get a unsuccessful response with a invalid key
     Given The user has an invalid key for the potter api endpoints
     When The user performs a GET request to the houses endpoint using an <id>
-    Then The response message should contains "API Key Not Found"
+    Then The response message should be "API Key Not Found"
 
     Examples:
 
