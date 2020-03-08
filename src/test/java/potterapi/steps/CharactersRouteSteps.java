@@ -6,7 +6,7 @@ import io.restassured.response.Response;
 import org.junit.Assert;
 import potterapi.CharactersAPI;
 import potterapi.PotterAPIContext;
-import potterapi.model.CharactersResponseBody;
+import potterapi.model.responses.CharactersResponseBody;
 
 import java.util.Arrays;
 import java.util.List;

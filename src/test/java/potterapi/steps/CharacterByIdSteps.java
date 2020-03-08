@@ -6,7 +6,7 @@ import org.apache.commons.lang3.StringUtils;
 import org.junit.Assert;
 import potterapi.CharactersAPI;
 import potterapi.PotterAPIContext;
-import potterapi.model.CharactersResponseBody;
+import potterapi.model.responses.CharactersResponseBody;
 
 public class CharacterByIdSteps implements En {
 

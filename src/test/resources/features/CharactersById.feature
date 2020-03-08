@@ -20,7 +20,7 @@ Feature: Get a character
     Given The user has access to the potter api endpoints
     When The user performs a GET request to the characters endpoint using an <id>
         #Then  The response status should be 404
-    Then The response error name should be "CastError" and contains "Cast to ObjectId failed for value"
+    Then The response error name should be "CastError" and the message should contains "Cast to ObjectId failed for value"
 
 
     Examples:

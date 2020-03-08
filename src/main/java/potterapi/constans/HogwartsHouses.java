@@ -1,4 +1,4 @@
-package potterapi;
+package potterapi.constans;
 
 public enum HogwartsHouses {
 

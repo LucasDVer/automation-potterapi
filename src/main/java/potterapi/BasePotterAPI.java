@@ -4,6 +4,7 @@ import com.common.framework.api.BaseAPI;
 import com.common.framework.utils.ConfigUtils;
 import io.restassured.RestAssured;
 import io.restassured.response.Response;
+import potterapi.model.User;
 
 public abstract class BasePotterAPI extends BaseAPI {
 

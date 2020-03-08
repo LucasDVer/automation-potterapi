@@ -1,4 +1,4 @@
-package potterapi.model;
+package potterapi.model.responses;
 
 import lombok.Getter;
 import lombok.Setter;

@@ -5,7 +5,7 @@ import io.cucumber.java8.En;
 import org.junit.Assert;
 import potterapi.HousesListAPI;
 import potterapi.PotterAPIContext;
-import potterapi.model.HousesResponseBody;
+import potterapi.model.responses.HousesResponseBody;
 
 import java.util.Arrays;
 import java.util.List;

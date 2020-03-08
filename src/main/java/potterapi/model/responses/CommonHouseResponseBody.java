@@ -1,4 +1,4 @@
-package potterapi.model;
+package potterapi.model.responses;
 
 import com.fasterxml.jackson.annotation.JsonProperty;
 import lombok.Getter;

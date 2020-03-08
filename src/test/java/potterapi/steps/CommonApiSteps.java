@@ -3,10 +3,10 @@ package potterapi.steps;
 import io.cucumber.java8.En;
 import org.junit.Assert;
 import potterapi.PotterAPIContext;
-import potterapi.User;
+import potterapi.model.User;
 import potterapi.constans.PotterAPIUsers;
-import potterapi.model.ErrorMessageBadIdResponseBody;
-import potterapi.model.ErrorMessageWithKeyResponseBody;
+import potterapi.model.responses.ErrorMessageBadIdResponseBody;
+import potterapi.model.responses.ErrorMessageWithKeyResponseBody;
 
 public class CommonApiSteps implements En {
 
@@ -42,10 +42,10 @@ public class CommonApiSteps implements En {
         Then("The response message should contains {string}", (String message) -> {
             ErrorMessageWithKeyResponseBody errorMessageWithKeyResponseBody = apiContext.getResponse().
                     as(ErrorMessageWithKeyResponseBody.class);
-            Assert.assertEquals("The message is incorrect", errorMessageWithKeyResponseBody.getError(), message);
+            Assert.assertTrue("The message is incorrect", errorMessageWithKeyResponseBody.getError().contains(message));
         });
 
-        Then("The response error name should be {string} and contains {string}", (String message,
+        Then("The response error name should be {string} and the message should contains {string}", (String message,
                                                                                   String secondMessage) -> {
             ErrorMessageBadIdResponseBody errorMessageBadIdResponseBody = apiContext.getResponse()
                     .as(ErrorMessageBadIdResponseBody.class);
