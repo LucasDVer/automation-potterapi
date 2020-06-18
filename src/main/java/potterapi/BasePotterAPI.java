@@ -1,7 +1,7 @@
 package potterapi;
 
 import com.common.framework.api.BaseAPI;
-import com.common.framework.utils.ConfigUtils;
+import com.common.framework.configuration.PropertiesProvider;
 import io.restassured.RestAssured;
 import io.restassured.response.Response;
 import potterapi.model.User;
@@ -18,7 +18,7 @@ public abstract class BasePotterAPI extends BaseAPI {
 
     @Override
     protected void loadBaseUrl() {
-        setBaseUrl(ConfigUtils.getPropertyFromFile(BASE_POTTER_API_URL_PROPERTY));
+        setBaseUrl(PropertiesProvider.getPropertyValue(BASE_POTTER_API_URL_PROPERTY));
     }
 
     public Response doGetWithUser(User user) {

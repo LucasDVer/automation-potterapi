@@ -1,6 +1,6 @@
 package potterapi;
 
-import com.common.framework.utils.ConfigUtils;
+import com.common.framework.configuration.PropertiesProvider;
 
 public class SortingHatAPI extends BasePotterAPI {
 
@@ -12,7 +12,7 @@ public class SortingHatAPI extends BasePotterAPI {
 
     @Override
     protected void loadSpecificPath() {
-        setSpecificPath(ConfigUtils.getPropertyFromFile(SORTING_HAT_URL_PROPERTY));
+        setSpecificPath(PropertiesProvider.getPropertyValue(SORTING_HAT_URL_PROPERTY));
     }
 
 }
