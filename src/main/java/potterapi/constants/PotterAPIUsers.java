@@ -1,8 +1,10 @@
 package potterapi.constants;
 
+import potterapi.configuration.PotterAPIVariablesProvider;
+
 public enum PotterAPIUsers {
 
-    VALID_USER("$2a$10$.FZSIO14hdGIY3KN6T.omueRT/cjt/DYqKSiB5Ef0XjHzZ4s7SIfW"),
+    VALID_USER(PotterAPIVariablesProvider.getPassword()),
     INVALID("invalidKey"),
     UNAUTHORIZED("");
 
