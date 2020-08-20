@@ -1,6 +1,6 @@
 package potterapi;
 
-import com.common.framework.utils.ConfigUtils;
+import com.common.framework.configuration.PropertiesProvider;
 
 public class CharactersAPI extends BasePotterAPI {
 
@@ -12,6 +12,6 @@ public class CharactersAPI extends BasePotterAPI {
 
     @Override
     protected void loadSpecificPath() {
-        setSpecificPath(ConfigUtils.getPropertyFromFile(CHARACTERS_URL_PROPERTY));
+        setSpecificPath(PropertiesProvider.getPropertyValue(CHARACTERS_URL_PROPERTY));
     }
 }
